@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OnTrack</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type = "text/css" href= "Dependencies/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!--My navigation bar at the beginning of my site-->
+
+    <nav class="navbar navbar-inverse main">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand nav-home" href="#">ON TRACK</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Log out</a></li>
+                </ul>
+                <form class="navbar-form navbar-right" action="/action_page.php">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Employee ID" name="search">
+                    </div>
+                    <button type="submit" class="btn btn-default">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Side nav bar-->
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                
+        <button class="dropdown-btn">Employee 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#" data-toggle="modal" data-target="#createMeetingModal">Create Employee</a>   
+        </div>
+
+        <button class="dropdown-btn">Meeting
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Create Meeting</a>    
+        </div>
+
+    </div>
+
+          
+    <div class="container-fluid main">
+        <div>
+            <span id="navOpen" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            
+        </div>
+    
+        <div class="container-fluid table-responsive">
+            <table class="table table-striped employee-table">
+                <tr>
+                  <td>Employee Id</td>
+                  <td>First Name</td>
+                  <td>Last Name</td>
+                  <td>Email</td>
+                  <td>Department</td>
+                  <td>Attendance</td>
+                  <td>Action</td>
+                </tr>
+                <tbody id="body">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Modal for creating employee -->
+    <div id="createMeetingModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Create Employee</h3>
+                    <p>Please fill in this form to create an employee.</p>
+                </div>
+                <div class="modal-body">
+                    <form action="http://localhost:3000/designers" method="POST">
+                        <div class="form-group">
+                            <label for="firstName">FirstName:</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Enter firstName" name="firstName">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="lastName">LastName:</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter lastName" name="lastName">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="Email">Email:</label>
+                            <input type="Email" class="form-control" id="createEmail" placeholder="Enter email" name="Email">
+                        </div>
+                        <div class="form-group">
+                                <label for="Department">Department:</label>
+                                <input type="text" class="form-control" id="department" placeholder="Enter department" name="Department">
+                            </div>
+                        <button type="submit" id="createDesigner" class="btn btn-success">Create</button>
+                    </form>
+                </div>    
+    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">&times;</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="./Dependencies/js/admin.js"></script>
+</body>
+</html>
