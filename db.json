@@ -68,6 +68,27 @@
       "email": "ime@yahoo.com",
       "department": "Data Centre",
       "id": 11
+    },
+    {
+      "firstName": "Elvis",
+      "lastName": "Okafor",
+      "email": "okafor",
+      "department": "",
+      "id": 12
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "department": "",
+      "id": 13
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "department": "",
+      "id": 14
     }
   ],
   "admin": [
@@ -110,6 +131,14 @@
       "department": "Customer care",
       "password": "ima",
       "id": 5
+    },
+    {
+      "firstName": "Ngozi",
+      "lastName": "Okafor",
+      "email": "ngozi@gmail.com",
+      "department": "Account",
+      "password": "ngozi",
+      "id": 6
     }
   ],
   "meeting": [

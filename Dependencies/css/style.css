@@ -2,7 +2,7 @@
     background: url(../images/Clock.jpg) no-repeat;
     width: 100%;
     min-height: 100vh;
-    background-size: 100%
+    background-size: 200%
 }
 .form-container{
     position: absolute;
@@ -14,11 +14,11 @@
     box-shadow: 0px 0px 10px 0px rdg(0, 0, 0);
     
 }
-@media only screen and (max-width: 678px){
+/* @media only screen and (max-width: 678px){
     .bg{
         background-size: 300%;
     }
-}
+} */
 
 
 .slideShow {

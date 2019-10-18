@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    //1. Removing this line so take note: $.get("http://localhost:3000/employees", function (data, status) {
-    $('.signup').on('click', function (){
+    $('#signup').on('click', function (){
             let firstName = $("#firstName").val();
             let lastName = $("#lastName").val();
             let email = $("#email1").val();
