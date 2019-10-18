@@ -1,64 +1,90 @@
 {
-    "employees": [
-      {
-        "firstName": "Eno",
-        "lastName": "Ekpe",
-        "email": "nowieluv.2010@ymail.com",
-        "department": "IT",
-        "attendance": "true",
-        "id": 1
-      },
-      {
-        "firstName": "maryjane",
-        "lastName": "Akpagbue",
-        "email": "enofestus.2010@gmail.com",
-        "department": "together",
-        "attendance": "true",
-        "id": 2
-      },
-      {
-        "firstName": "Timi",
-        "lastName": "Oyedele",
-        "email": "timi.oyedele",
-        "department": "HR",
-        "attendance": "false",
-        "id": 3
-      },
-      {
-        "firstName": "Maryjane",
-        "lastName": "Akpagbue",
-        "email": "maryjane.akpagbue",
-        "department": "Data Engineer",
-        "password": "maryjane",
-        "id": 4
-      },
-      {
-        "firstName": "Innocent",
-        "lastName": "Patrick",
-        "email": "adaugo.okezie@fb.appen.com",
-        "department": "IT",
-        "attendance": "false",
-        "id": 6
-      }
-    ],
-    "admin": [
-      {
-        "firstName": "Eno",
-        "lastName": "Ekpe",
-        "email": "nowieluv.2010@ymail.com",
-        "department": "IT",
-        "password": "password",
-        "id": 1
-      }
-    ],
-
-    "meetings": [
-        {
-          "Topic": "Eno",
-          "Description": "Ekpe",
-          "Date": "nowieluv.2010@ymail.com",
-          "Time": "IT",
-          "id": 1
-        }
-      ]
-  }
+  "employee": [
+    {
+      "firstName": "Eno",
+      "lastName": "Ekpe",
+      "email": "eno.2010@ymail.com",
+      "department": "IT",
+      "attendance": "true",
+      "id": 1
+    },
+    {
+      "firstName": "maryjane",
+      "lastName": "Akpagbue",
+      "email": "enofestus.2010@gmail.com",
+      "department": "together",
+      "attendance": "true",
+      "id": 2
+    },
+    {
+      "firstName": "Timi",
+      "lastName": "Oyedele",
+      "email": "timi.oyedele",
+      "department": "HR",
+      "attendance": "false",
+      "id": 3
+    },
+    {
+      "firstName": "Maryjane",
+      "lastName": "Akpagbue",
+      "email": "maryjane.akpagbue",
+      "department": "Data Engineer",
+      "password": "maryjane",
+      "id": 4
+    },
+    {
+      "firstName": "Innocent",
+      "lastName": "Patrick",
+      "email": "adaugo.okezie@fb.appen.com",
+      "department": "IT",
+      "attendance": "false",
+      "id": 6
+    },
+    {
+      "firstName": "Eno",
+      "lastName": "Ekpe",
+      "Email": "eno@yahoo.com",
+      "Department": "IT",
+      "id": 7
+    },
+    {
+      "firstName": "Eno",
+      "lastName": "Ekpe",
+      "Email": "eno@yahoo.com",
+      "Department": "IT",
+      "id": 8
+    },
+    {
+      "firstName": "Eno",
+      "lastName": "Ekpe",
+      "department": "IT",
+      "attendance": "false",
+      "id": 9
+    },
+    {
+      "firstName": "Dina",
+      "lastName": "Kalu",
+      "department": "Admin",
+      "id": 10
+    }
+  ],
+  "admin": [
+    {
+      "firstName": "Eno",
+      "lastName": "Ekpe",
+      "email": "nowieluv.2010@ymail.com",
+      "department": "IT",
+      "password": "password",
+      "id": 1
+    }
+  ],
+  "meeting": [
+    {
+      "Topic": "Increasing Productivity",
+      "Description": "Educating staff on how to increase productivity",
+      "Date": "12/12/2018",
+      "Time": "12:00",
+      "id": 1
+    }
+  ]
+}

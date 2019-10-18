@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
-<body>
+<body onLoad="load()">
 
     <!--My navigation bar at the beginning of my site-->
 
@@ -93,10 +93,13 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3>Create Meeting</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
                     <p>Please fill in this form to create a meeting.</p>
                 </div>
                 <div class="modal-body">
-                    <form action="http://localhost:3000/designers" method="POST"> 
+                    <form> 
                         <div class="form-group">
                             <label for="email">Topic:</label>
                             <input type="topic" class="form-control" id="topic" placeholder="Enter topic" name="topic">
@@ -115,13 +118,12 @@
                                 <label for="lastName">Time:</label>
                                 <input type="time" class="form-control" id="time" placeholder="Enter time" name="time">
                             </div>
-                        <button type="submit" id="createDesigner" class="btn btn-success">Create</button>
                     </form>
-                </div>    
-    
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">&times;</button>
-                </div>
+                </div> 
+                    <form class="modal-footer">
+                        <button type="button" id="create-meeting" class="btn btn-success">Save changes</button>
+                      </form>
+                   
             </div>
         </div>
     </div> 
@@ -130,8 +132,11 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="./Dependencies/js/adminStyling.js"></script>
+    <script src="./Dependencies/js/employee.js"></script>
+    <script src="./Dependencies/js/meeting.js"></script>
 </body>
 </html>
