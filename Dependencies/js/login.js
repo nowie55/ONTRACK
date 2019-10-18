@@ -20,7 +20,7 @@
 
 
 
-$(document).ready(function (){
+/*$(document).ready(function (){
     $.get("http://localhost:3000/admin", function (data, status) { 
         console.log(data); 
         $('#login').click(function(){

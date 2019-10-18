@@ -5,7 +5,6 @@
       "lastName": "Ekpe",
       "email": "eno.2010@ymail.com",
       "department": "IT",
-      "attendance": "true",
       "id": 1
     },
     {
@@ -13,7 +12,6 @@
       "lastName": "Akpagbue",
       "email": "enofestus.2010@gmail.com",
       "department": "together",
-      "attendance": "true",
       "id": 2
     },
     {
@@ -21,7 +19,6 @@
       "lastName": "Oyedele",
       "email": "timi.oyedele",
       "department": "HR",
-      "attendance": "false",
       "id": 3
     },
     {
@@ -29,7 +26,6 @@
       "lastName": "Akpagbue",
       "email": "maryjane.akpagbue",
       "department": "Data Engineer",
-      "password": "maryjane",
       "id": 4
     },
     {
@@ -37,7 +33,6 @@
       "lastName": "Patrick",
       "email": "adaugo.okezie@fb.appen.com",
       "department": "IT",
-      "attendance": "false",
       "id": 6
     },
     {
@@ -66,6 +61,13 @@
       "lastName": "Kalu",
       "department": "Admin",
       "id": 10
+    },
+    {
+      "firstName": "Ime",
+      "lastName": "Kalu",
+      "email": "ime@yahoo.com",
+      "department": "Data Centre",
+      "id": 11
     }
   ],
   "admin": [
@@ -76,6 +78,38 @@
       "department": "IT",
       "password": "password",
       "id": 1
+    },
+    {
+      "firstName": "Eno",
+      "lastName": "Kalu",
+      "email": "eno@gmail.com",
+      "department": "Admin",
+      "password": "eno",
+      "id": 2
+    },
+    {
+      "firstName": "Dina",
+      "lastName": "Ekpe",
+      "email": "dina@gmail.com",
+      "department": "Admin",
+      "password": "dina",
+      "id": 3
+    },
+    {
+      "firstName": "Don",
+      "lastName": "Ekpe",
+      "email": "don@gmail.com",
+      "department": "Account",
+      "password": "don",
+      "id": 4
+    },
+    {
+      "firstName": "Ima",
+      "lastName": "Festus",
+      "email": "ima@gmail.com",
+      "department": "Customer care",
+      "password": "ima",
+      "id": 5
     }
   ],
   "meeting": [
