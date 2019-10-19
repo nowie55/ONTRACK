@@ -17,7 +17,7 @@ $('#createMeeting').click(function () {
 
     $.ajax({
         type: 'POST',
-        url: 'http://localhost:3000/meeting',
+        url: 'http://localhost:3000/meeting/',
         data: { topic: topic, description: description, date: date, time: time}, //, attendance: false
         success: function (result) {
             alert('New Meeting created');
@@ -63,7 +63,7 @@ function populateTable(data) {
 }
 //<td><input type="checkbox" class="attendance-box" ${data[i]['attendance'] == 'true' ? 'checked' : ''} /></td>
 //<td>
-
+// this takes the admin to the employee's page from the meeting page
 $('#employee').click(function () {
 
     window.location.assign("/employee.html");
@@ -76,3 +76,20 @@ $('#logout').click(function () {
     window.location.assign("/index.html");
                       
 })  
+
+// this method is used to delete a meeting using the ID of the meeting
+$('.meeting-table').on('click', '.delete', function () {
+    var $this = $(this);
+    var id = $this.parent().siblings('.row-id');
+
+    var idValue = id.text();
+    $.ajax({
+        method: 'DELETE',
+        url: 'http://localhost:3000/meeting/' + idValue,
+        success: function (result) {
+            console.log(result);
+            location.reload();
+        }
+    })
+    alert('Employee with id ' + idValue + ' deleted');
+})

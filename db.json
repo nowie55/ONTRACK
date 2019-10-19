@@ -103,6 +103,20 @@
       "email": "esther@yahoo.com",
       "department": "Customer care",
       "id": 16
+    },
+    {
+      "firstName": "Odudu",
+      "lastName": "Akpan",
+      "email": "odu@yahoo.com",
+      "department": "Welfare",
+      "id": 17
+    },
+    {
+      "firstName": "Ujah",
+      "lastName": "Okafor",
+      "email": "ujah@yahoo.com",
+      "department": "SOC",
+      "id": 18
     }
   ],
   "admin": [
@@ -205,13 +219,6 @@
   ],
   "meeting": [
     {
-      "Topic": "Increasing Productivity",
-      "Description": "Educating staff on how to increase productivity",
-      "Date": "12/12/2018",
-      "Time": "12:00",
-      "id": 1
-    },
-    {
       "topic": "Follow up",
       "description": "Educating staff on follow up methods",
       "date": "2019-10-26",
@@ -231,6 +238,13 @@
       "date": "2019-10-10",
       "time": "14:00",
       "id": 4
+    },
+    {
+      "topic": "Orientation",
+      "description": "Introducing new team members to work flow and ethics",
+      "date": "2019-10-01",
+      "time": "13:00",
+      "id": 5
     }
   ]
 }
