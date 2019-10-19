@@ -89,6 +89,20 @@
       "email": "",
       "department": "",
       "id": 14
+    },
+    {
+      "firstName": "Samuel",
+      "lastName": "Obong",
+      "email": "samuel@yahoo.com",
+      "department": "Customer care",
+      "id": 15
+    },
+    {
+      "firstName": "Esther",
+      "lastName": "Akpagbue",
+      "email": "esther@yahoo.com",
+      "department": "Customer care",
+      "id": 16
     }
   ],
   "admin": [
@@ -139,6 +153,14 @@
       "department": "Account",
       "password": "ngozi",
       "id": 6
+    },
+    {
+      "firstName": "Patrick",
+      "lastName": "Festus",
+      "email": "patrick@gmail.com",
+      "department": "IT",
+      "password": "patrick",
+      "id": 7
     }
   ],
   "meeting": [
@@ -148,6 +170,27 @@
       "Date": "12/12/2018",
       "Time": "12:00",
       "id": 1
+    },
+    {
+      "topic": "Follow up",
+      "description": "Educating staff on follow up methods",
+      "date": "2019-10-26",
+      "time": "13:30",
+      "id": 2
+    },
+    {
+      "topic": "Follow up",
+      "description": "Educating staff on follow up methods",
+      "date": "2019-10-25",
+      "time": "13:59",
+      "id": 3
+    },
+    {
+      "topic": "Tracker",
+      "description": "How to keep track of data.",
+      "date": "2019-10-10",
+      "time": "14:00",
+      "id": 4
     }
   ]
 }

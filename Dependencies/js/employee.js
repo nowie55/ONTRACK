@@ -9,6 +9,12 @@ $('#createEmployee').click(function () {
     var email = $("#email").val();
     var department = $("#department").val();
 
+    if(firstName == "" || lastName == "" || email == "" || department == "")
+    {
+        alert("Please fill all fields");
+    }
+    else{
+
     $.ajax({
         type: 'POST',
         url: 'http://localhost:3000/employee',
@@ -18,6 +24,8 @@ $('#createEmployee').click(function () {
             location.reload();
         }
     })
+
+}
 
 })
 
@@ -43,6 +51,7 @@ function populateTable(data) {
                                                <td>${data[i]['lastName']}</td>
                                                <td>${data[i]['email']}</td>
                                                <td>${data[i]['department']}</td>
+                                               <td>
                                                <button class="btn btn-sm btn-primary delete">Edit</button>           
                                                <button class="btn btn-sm btn-danger delete">Delete</button>
                                              </td> 

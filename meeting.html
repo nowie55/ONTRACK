@@ -99,29 +99,29 @@
                     <p>Please fill in this form to create a meeting.</p>
                 </div>
                 <div class="modal-body">
-                    <form> 
+                    <form method="POST"> 
                         <div class="form-group">
-                            <label for="email">Topic:</label>
-                            <input type="topic" class="form-control" id="topic" placeholder="Enter topic" name="topic">
+                            <label for="topic">Topic:</label>
+                            <input type="text" class="form-control" id="topic" placeholder="Enter Topic" name="topic">
                         </div>
                         
                         <div class="form-group">
-                            <label for="firstName">Description:</label>
-                            <input type="text" class="form-control" id="description" placeholder="Enter description" name="description">
+                            <label for="description">Description:</label>
+                            <input type="text" class="form-control" id="description" placeholder="Enter Description" name="description">
                         </div>
     
                         <div class="form-group">
-                            <label for="lastName">Date:</label>
-                            <input type="date" class="form-control" id="date" placeholder="Enter date" name="date">
+                            <label for="date">Date:</label>
+                            <input type="date" class="form-control" id="date" placeholder="Enter Date" name="date">
                         </div>
                         <div class="form-group">
-                                <label for="lastName">Time:</label>
-                                <input type="time" class="form-control" id="time" placeholder="Enter time" name="time">
+                                <label for="time">Time:</label>
+                                <input type="time" class="form-control" id="time" placeholder="Enter Time" name="time">
                             </div>
                     </form>
                 </div> 
                     <form class="modal-footer">
-                        <button type="button" id="create-meeting" class="btn btn-success">Save changes</button>
+                        <button type="button" id="createMeeting" class="btn btn-success">Save changes</button>
                       </form>
                    
             </div>
@@ -138,5 +138,6 @@
     <script src="./Dependencies/js/adminStyling.js"></script>
     <script src="./Dependencies/js/employee.js"></script>
     <script src="./Dependencies/js/meeting.js"></script>
+    <script src="./Dependencies/js/login.js"></script>
 </body>
 </html>
