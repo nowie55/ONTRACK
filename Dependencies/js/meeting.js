@@ -63,3 +63,16 @@ function populateTable(data) {
 }
 //<td><input type="checkbox" class="attendance-box" ${data[i]['attendance'] == 'true' ? 'checked' : ''} /></td>
 //<td>
+
+$('#employee').click(function () {
+
+    window.location.assign("/employee.html");
+                      
+})  
+
+// to implement logout functionality
+$('#logout').click(function () {
+
+    window.location.assign("/index.html");
+                      
+})  

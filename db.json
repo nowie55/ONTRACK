@@ -161,6 +161,46 @@
       "department": "IT",
       "password": "patrick",
       "id": 7
+    },
+    {
+      "firstName": "Deborah",
+      "lastName": "Ochai",
+      "email": "debo\"gmail.com",
+      "department": "Maintenance",
+      "password": "",
+      "id": 8
+    },
+    {
+      "firstName": "Deborah",
+      "lastName": "Ochai",
+      "email": "debo@gmail.com",
+      "department": "Maintenance",
+      "password": "",
+      "id": 9
+    },
+    {
+      "firstName": "Deborah",
+      "lastName": "Ochai",
+      "email": "debo@gmail.com",
+      "department": "Maintenance",
+      "password": "",
+      "id": 10
+    },
+    {
+      "firstName": "Deborah",
+      "lastName": "Ochai",
+      "email": "debo@gmail.com",
+      "department": "Maintenance",
+      "password": "",
+      "id": 11
+    },
+    {
+      "firstName": "Deborah",
+      "lastName": "Ochai",
+      "email": "debo@gmail.com",
+      "department": "Maintenance",
+      "password": "debo",
+      "id": 12
     }
   ],
   "meeting": [

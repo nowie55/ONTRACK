@@ -62,3 +62,17 @@ function populateTable(data) {
 }
 //<td><input type="checkbox" class="attendance-box" ${data[i]['attendance'] == 'true' ? 'checked' : ''} /></td>
 //<td>
+
+// to redirect the meeting dropdown to the meeting page
+$('#meeting').click(function () {
+
+    window.location.assign("/meeting.html");
+                      
+})    
+
+// to implement logout functionality
+$('#logout').click(function () {
+
+    window.location.assign("/index.html");
+                      
+})  

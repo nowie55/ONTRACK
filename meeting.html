@@ -26,7 +26,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">                
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Log out</a></li>
+                    <li><a href="#" id="logout"><span class="glyphicon glyphicon-user"></span> Log out</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" action="/action_page.php">
                     <div class="form-group">
@@ -46,11 +46,11 @@
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 
-        <button class="dropdown-btn">Employee 
+        <button class="dropdown-btn" id="employee">Employee 
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <a href="#">Create Employee</a>   
+            <a href="#" id="employee1">Create Employee</a>   
         </div>
 
         <button class="dropdown-btn">Meeting
