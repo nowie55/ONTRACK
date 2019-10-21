@@ -4,10 +4,10 @@ var container;          //define html contents for the table
 
 //this is used to add a new meeting to the system
 $('#createMeeting').click(function () {
-    var topic = $("#topic").val();
-    var description = $("#description").val();
-    var date = $("#date").val();
-    var time = $("#time").val();
+    let topic = $("#topic").val();
+    let description = $("#description").val();
+    let date = $("#date").val();
+    let time = $("#time").val();
 
     if(topic == "" || description == "" || date == "" || time == "")
     {
@@ -29,9 +29,6 @@ $('#createMeeting').click(function () {
 
 })
 
-
-
-
 function load() {     //this loads data from a server and 
     //puts the returned data into the selected element
     $.getJSON("db.json", function (json) {
@@ -46,15 +43,17 @@ function populateTable(data) {
     for (let i = 0; i < meeting.length; i++) {
         container = document.createElement("tr");
         container.innerHTML = `
-                                               <td class="row-id">${data[i]['id']}</td>
+                                               <a href="#"<td class="row-id">${data[i]['id']}</td></a>
                                                <td>${data[i]['topic']}</td>
                                                <td>${data[i]['description']}</td>
                                                <td>${data[i]['date']}</td>
                                                <td>${data[i]['time']}</td>
                                                <td>
-                                               <button class="btn btn-sm btn-primary delete">Edit</button>           
+                                               <div>
+                                               <button class="btn btn-sm btn-warning edit" id="rowEdit"  data-toggle="modal" data-target="#editMeetingModal">Edit</button>           
                                                <button class="btn btn-sm btn-danger delete">Delete</button>
                                                <button class="btn btn-sm btn-success add">Add to meeting</button>
+                                               </div>
                                              </td> 
                                                 </tr>`;
         document.getElementById('meetingBody').appendChild(container);
@@ -81,7 +80,6 @@ $('#logout').click(function () {
 $('.meeting-table').on('click', '.delete', function () {
     var $this = $(this);
     var id = $this.parent().siblings('.row-id');
-
     var idValue = id.text();
     $.ajax({
         method: 'DELETE',
@@ -91,5 +89,42 @@ $('.meeting-table').on('click', '.delete', function () {
             location.reload();
         }
     })
-    alert('Employee with id ' + idValue + ' deleted');
+    alert('Meeting with id ' + idValue + ' deleted');
 })
+
+// edit meeting
+
+
+$('.meeting-table').on('click', '.edit', function () {
+    let $this = $(this);
+    let id = $this.parent().siblings('.row-id');
+    let idValue = id.text();
+
+    $('#editMeeting').click(function () {
+        let topic = $("#topic").val();
+        let description = $("#description").val();
+        let date = $("#date").val();
+        let time = $("#time").val();
+    
+
+    $.ajax({
+        method: 'PUT',
+        url: 'http://localhost:3000/meeting/' + idValue,
+        data: { topic: topic, description: description, date: date, time: time}, //, attendance: false
+         success: function (result) {
+            console.log(result);
+            location.reload();
+        }
+    })
+    alert('Meeting with id ' + idValue + ' updated');
+})
+
+
+})    
+
+// this takes the admin to the viewMeeting.html(work in progress)
+$('.row-id').click(function () {
+
+    window.location.assign("/viewMeeting.html");
+                      
+})  

@@ -87,8 +87,8 @@
 
     </div>
 
-    <!-- Modal for creating employee -->
-    <div id="createMeetingModal" class="modal fade" role="dialog">
+    <!-- Modal for creating meeting -->
+    <div class="modal fade" id="createMeetingModal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -121,14 +121,55 @@
                     </form>
                 </div> 
                     <form class="modal-footer">
-                        <button type="button" id="createMeeting" class="btn btn-success">Save changes</button>
+                        <button type="button"  class="btn btn-success" id="createMeeting">Save changes</button>
                       </form>
                    
             </div>
         </div>
     </div> 
 
+       <!-- Modal for editing meeting -->
+       <div class="modal fade" id="editMeetingModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Edit Meeting</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    <p>Please fill in this form to edit a meeting.</p>
+                </div>
+                <div class="modal-body">
+                    <form method="PUT"> 
+                        <div class="form-group">
+                            <label for="topic">Topic:</label>
+                            <input type="text" class="form-control" id="topic" placeholder="Enter Topic" name="topic">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <input type="text" class="form-control" id="description" placeholder="Enter Description" name="description">
+                        </div>
     
+                        <div class="form-group">
+                            <label for="date">Date:</label>
+                            <input type="date" class="form-control" id="date" placeholder="Enter Date" name="date">
+                        </div>
+                        <div class="form-group">
+                                <label for="time">Time:</label>
+                                <input type="time" class="form-control" id="time" placeholder="Enter Time" name="time">
+                            </div>
+                    </form>
+                </div> 
+                    <form class="modal-footer">
+                        <button type="button"  class="btn btn-success" id="editMeeting">Save changes</button>
+                      </form>
+                   
+            </div>
+        </div>
+    </div> 
+    
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

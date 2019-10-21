@@ -52,8 +52,10 @@ function populateTable(data) {
                                                <td>${data[i]['email']}</td>
                                                <td>${data[i]['department']}</td>
                                                <td>
-                                               <button class="btn btn-sm btn-primary delete">Edit</button>           
+                                               <div>
+                                               <button class="btn btn-sm btn-warning edit">Edit</button>           
                                                <button class="btn btn-sm btn-danger delete">Delete</button>
+                                               </div>
                                              </td> 
                                                 </tr>`;
         document.getElementById('body').appendChild(contain);
@@ -85,7 +87,7 @@ $('.employee-table').on('click', '.delete', function () {
     var idValue = id.text();
     $.ajax({
         method: 'DELETE',
-        url: 'http://localhost:3000/users/' + idValue,
+        url: 'http://localhost:3000/employee/' + idValue,
         success: function (result) {
             console.log(result);
             location.reload();
@@ -93,3 +95,17 @@ $('.employee-table').on('click', '.delete', function () {
     })
     alert('Employee with id ' + idValue + ' deleted');
 })
+
+//method for reading an employee
+$('#search-bar').keyup(event => {
+
+    let filteredResult = employee.filter(employee => {
+        if (event.target.value === '') {
+            populateTable(employee)
+        }
+
+        return employee.id.includes(event.target.value)  //it filters out the employee which matches the ID being searched 
+    })
+    populateTable(filteredResult);
+})
+
