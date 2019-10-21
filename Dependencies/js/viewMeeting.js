@@ -1,6 +1,5 @@
 let viewMeeting = [];        //an array used to store all meeting         
-let container;
-let contain;          //define html contents for the table
+let contained;          //define html contents for the table
 
 //this is used to add an employee to a meeting
 $('#addEmployee').click(function () {
@@ -35,7 +34,7 @@ function load() {     //this loads data from a server and
     //puts the returned data into the selected element
     $.getJSON("db.json", function (json) {
         viewMeeting = json.viewMeeting;
-        container;
+        contained;
         populateTable(viewMeeting);
     });
 }
@@ -43,8 +42,8 @@ function load() {     //this loads data from a server and
 function populateTable(data) {
     document.getElementById('viewMeetingBody').innerHTML = " ";
     for (let i = 0; i < viewMeeting.length; i++) {
-        container = document.createElement("tr");
-        container.innerHTML = `
+        contained = document.createElement("tr");
+        contained.innerHTML = `
                                                 <td class="row-id">${data[i]['id']}</td>
                                                 <td>${data[i]['firstName']}</td>
                                                 <td>${data[i]['lastName']}</td>
@@ -57,7 +56,7 @@ function populateTable(data) {
                                                </div>
                                              </td> 
                                                 </tr>`;
-        document.getElementById('viewMeetingBody').appendChild(container);
+        document.getElementById('viewMeetingBody').appendChild(contained);
     }
 
 }

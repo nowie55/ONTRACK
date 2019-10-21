@@ -50,9 +50,9 @@ function populateTable(data) {
                                                <td>${data[i]['time']}</td>
                                                <td>
                                                <div>
-                                               <button class="btn btn-sm btn-warning edit" id="rowEdit"  data-toggle="modal" data-target="#editMeetingModal">Edit</button>           
                                                <button class="btn btn-sm btn-danger delete">Delete</button>
-                                               <button class="btn btn-sm btn-success add">Add to meeting</button>
+                                               <button class="btn btn-sm btn-warning edit" id="rowEdit"  data-toggle="modal" data-target="#editMeetingModal">Edit</button>   
+                                               <button class="btn btn-sm btn-success add" id="rowAdd"  data-toggle="modal" data-target="#addEmployeeModal">Add to meeting</button>
                                                </div>
                                              </td> 
                                                 </tr>`;
@@ -128,3 +128,31 @@ $('.row-id').click(function () {
     window.location.assign("/viewMeeting.html");
                       
 })  
+
+//this is used to add an employee to a meeting
+$('#addEmployee').click(function () {
+    let firstName = $("#firstName").val();
+    let lastName = $("#lastName").val();
+    let email = $("#email").val();
+    let department = $("#department").val();
+    let attendance = $("#attendance").val();
+
+    if(firstName == "" || lastName == "" || email == "" || department == "" || attendance == "")
+    {
+        alert("Please fill all fields");
+    }
+    else{
+
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:3000/viewMeeting/',
+        data: { firstName: firstName, lastName: lastName, email: email, department: department, attendance: attendance}, //, attendance: false
+        success: function (result) {
+            alert('Employee added to meeting successfuly');
+            location.reload();
+        }
+    })
+
+}
+
+})

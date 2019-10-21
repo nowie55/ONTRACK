@@ -53,7 +53,7 @@ function populateTable(data) {
                                                <td>${data[i]['department']}</td>
                                                <td>
                                                <div>
-                                               <button class="btn btn-sm btn-warning edit">Edit</button>           
+                                               <button class="btn btn-sm btn-warning edit" id="rowEdit"  data-toggle="modal" data-target="#editEmployeeModal">Edit</button>           
                                                <button class="btn btn-sm btn-danger delete">Delete</button>
                                                </div>
                                              </td> 
