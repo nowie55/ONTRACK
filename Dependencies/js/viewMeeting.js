@@ -2,32 +2,32 @@ let viewMeeting = [];        //an array used to store all meeting
 let contained;          //define html contents for the table
 
 //this is used to add an employee to a meeting
-$('#addEmployee').click(function () {
-    let firstName = $("#firstName").val();
-    let lastName = $("#lastName").val();
-    let email = $("#email").val();
-    let department = $("#department").val();
-    let attendance = $("#attendance").val();
+// $('#addEmployee').click(function () {
+//     let firstName = $("#firstName").val();
+//     let lastName = $("#lastName").val();
+//     let email = $("#email").val();
+//     let department = $("#department").val();
+//     let attendance = $("#attendance").val();
 
-    if(firstName == "" || lastName == "" || email == "" || department == "" || attendance == "")
-    {
-        alert("Please fill all fields");
-    }
-    else{
+//     if(firstName == "" || lastName == "" || email == "" || department == "" || attendance == "")
+//     {
+//         alert("Please fill all fields");
+//     }
+//     else{
 
-    $.ajax({
-        type: 'POST',
-        url: 'http://localhost:3000/viewMeeting/',
-        data: { firstName: firstName, lastName: lastName, email: email, department: department, attendance: attendance}, //, attendance: false
-        success: function (result) {
-            alert('Employee added to meeting successfuly');
-            location.reload();
-        }
-    })
+//     $.ajax({
+//         type: 'POST',
+//         url: 'http://localhost:3000/viewMeeting/',
+//         data: { firstName: firstName, lastName: lastName, email: email, department: department, attendance: attendance}, //, attendance: false
+//         success: function (result) {
+//             alert('Employee added to meeting successfuly');
+//             location.reload();
+//         }
+//     })
 
-}
+// }
 
-})
+// })
 
 
 function load() {     //this loads data from a server and 
@@ -76,3 +76,24 @@ $('.meeting-table').on('click', '.remove', function () {
     })
     alert('Employee with id ' + idValue + ' removed from meeting');
 })
+
+//method for checking each employee's attendance
+$('.viewMeetingTable').on('change', '.attendance-box', function () {
+    var $this = $(this);
+    var id = $this.parent().siblings('.row-id');
+    var idValue = id.text();
+    var state = $this.is(':checked'); //<p> I am good <p/>
+
+    $.getJSON('http://localhost:3000/viewMeeting/' + idValue, function (data) {
+
+        data.attendance = state;
+        $.ajax({
+            method: 'PUT',
+            url: 'http://localhost:3000/viewMeeting/' + idValue,
+            data: data,
+            success: function (result) {
+                alert('Attendance updated');
+            }
+        });
+    });
+});

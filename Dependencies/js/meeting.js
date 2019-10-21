@@ -92,7 +92,7 @@ $('.meeting-table').on('click', '.delete', function () {
     alert('Meeting with id ' + idValue + ' deleted');
 })
 
-// edit meeting
+// edit meeting(work in progress)
 
 
 $('.meeting-table').on('click', '.edit', function () {
@@ -129,7 +129,7 @@ $('.row-id').click(function () {
                       
 })  
 
-//this is used to add an employee to a meeting
+//this is used to add an employee to a meeting(work in progress)
 $('#addEmployee').click(function () {
     let firstName = $("#firstName").val();
     let lastName = $("#lastName").val();

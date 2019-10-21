@@ -109,3 +109,30 @@ $('#search-bar').keyup(event => {
     populateTable(filteredResult);
 })
 
+//method for editing an employee
+
+$('#editEmployee').click(function () {
+    let firstName = $("#firstName").val();
+    let lastName = $("#lastName").val();
+    let email = $("#email").val();
+    let department = $("#department").val();
+
+    if(firstName == "" || lastName == "" || email == "" || department == "")
+    {
+        alert("Please fill all fields");
+    }
+    else{
+
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:3000/employee/',
+        data: { firstName: firstName, lastName: lastName, email: email, department: department}, //, attendance: false
+        success: function (result) {
+            alert('Employee edited successfuly');
+            location.reload();
+        }
+    })
+
+}
+
+})

@@ -176,7 +176,7 @@
       "lastName": "Kalu",
       "email": "Kalu",
       "department": "Admin",
-      "attendance": "false",
+      "attendance": "true",
       "id": 10
     }
   ]
