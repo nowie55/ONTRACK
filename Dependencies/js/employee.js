@@ -1,5 +1,6 @@
 var employee = [];        //an array used to store all employee         
-var contain;          //define html contents for the table
+var contain;
+var id=0;          //define html contents for the table
 
 
 //this is used to add a new employee to the system
@@ -40,6 +41,10 @@ function load() {                                   //this loads data from a ser
         populateTable(employee);
     });
 }
+
+// jQuery.get('127.9.4.0:3000/employee', function(data) {
+
+// })
 //method for generating the body of the dynamic table
 function populateTable(data) {
     document.getElementById('body').innerHTML = " ";
@@ -47,15 +52,13 @@ function populateTable(data) {
         contain = document.createElement("tr");
         contain.innerHTML = `
                                                <td class="row-id">${data[i]['id']}</td>
-                                               <td>${data[i]['firstName']}</td>
-                                               <td>${data[i]['lastName']}</td>
-                                               <td>${data[i]['email']}</td>
-                                               <td>${data[i]['department']}</td>
+                                               <td class="firstName">${data[i]['firstName']}</td>
+                                               <td class="lastName">${data[i]['lastName']}</td>
+                                               <td class="email">${data[i]['email']}</td>
+                                               <td class="department">${data[i]['department']}</td>
                                                <td>
-                                               <div>
                                                <button class="btn btn-sm btn-warning edit" id="rowEdit"  data-toggle="modal" data-target="#editEmployeeModal">Edit</button>           
                                                <button class="btn btn-sm btn-danger delete">Delete</button>
-                                               </div>
                                              </td> 
                                                 </tr>`;
         document.getElementById('body').appendChild(contain);
@@ -83,7 +86,6 @@ $('#logout').click(function () {
 $('.employee-table').on('click', '.delete', function () {
     var $this = $(this);
     var id = $this.parent().siblings('.row-id');
-
     var idValue = id.text();
     $.ajax({
         method: 'DELETE',
@@ -96,7 +98,7 @@ $('.employee-table').on('click', '.delete', function () {
     alert('Employee with id ' + idValue + ' deleted');
 })
 
-//method for reading an employee
+//method for reading an employee(in progress)
 $('#search-bar').keyup(event => {
 
     let filteredResult = employee.filter(employee => {
@@ -109,30 +111,46 @@ $('#search-bar').keyup(event => {
     populateTable(filteredResult);
 })
 
+
 //method for editing an employee
 
-$('#editEmployee').click(function () {
-    let firstName = $("#firstName").val();
-    let lastName = $("#lastName").val();
-    let email = $("#email").val();
-    let department = $("#department").val();
+$('.employee-table').on('click', '.edit', function(e) {
 
-    if(firstName == "" || lastName == "" || email == "" || department == "")
-    {
-        alert("Please fill all fields");
-    }
-    else{
+    var fName =   $(e.target).closest('tr').find(".firstName").html();
+    var lName =   $(e.target).closest('tr').find(".lastName").html();
+    var mail =   $(e.target).closest('tr').find(".email").html();
+    var dept =   $(e.target).closest('tr').find(".department").html();
+    id = $(e.target).closest('tr').find(".row-id").html();
+   
+$("#firstName1").val(fName);
+$("#lastName1").val(lName);
+$("#email1").val(mail);
+$("#department1").val(dept);
+
+
+})
+
+$('#updateEmployee').click(function(e) {
+
+  
+let firstName= $("#firstName1").val();
+let lastName=$("#lastName1").val();
+let email=$("#email1").val();
+let department=$("#department1").val();
 
     $.ajax({
-        type: 'POST',
-        url: 'http://localhost:3000/employee/',
+        type: 'PUT',
+        url: 'http://localhost:3000/employee/' +id,
         data: { firstName: firstName, lastName: lastName, email: email, department: department}, //, attendance: false
         success: function (result) {
             alert('Employee edited successfuly');
             location.reload();
         }
-    })
+   
 
-}
+
+
+})
+
 
 })

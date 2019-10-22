@@ -1,5 +1,5 @@
 let viewMeeting = [];        //an array used to store all meeting         
-let contained;          //define html contents for the table
+// let contained;          //define html contents for the table
 
 //this is used to add an employee to a meeting
 // $('#addEmployee').click(function () {
@@ -34,7 +34,6 @@ function load() {     //this loads data from a server and
     //puts the returned data into the selected element
     $.getJSON("db.json", function (json) {
         viewMeeting = json.viewMeeting;
-        contained;
         populateTable(viewMeeting);
     });
 }
@@ -42,7 +41,7 @@ function load() {     //this loads data from a server and
 function populateTable(data) {
     document.getElementById('viewMeetingBody').innerHTML = " ";
     for (let i = 0; i < viewMeeting.length; i++) {
-        contained = document.createElement("tr");
+        let contained = document.createElement("tr");
         contained.innerHTML = `
                                                 <td class="row-id">${data[i]['id']}</td>
                                                 <td>${data[i]['firstName']}</td>
@@ -51,9 +50,7 @@ function populateTable(data) {
                                                 <td>${data[i]['department']}</td>
                                                <td><input type="checkbox" class="attendance-box" ${data[i]['attendance'] == 'true' ? 'checked' : ''} /></td>
                                                <td>
-                                               <div>
                                                <button class="btn btn-sm btn-danger remove">Remove</button>
-                                               </div>
                                              </td> 
                                                 </tr>`;
         document.getElementById('viewMeetingBody').appendChild(contained);
@@ -85,8 +82,11 @@ $('.viewMeetingTable').on('change', '.attendance-box', function () {
     var state = $this.is(':checked'); //<p> I am good <p/>
 
     $.getJSON('http://localhost:3000/viewMeeting/' + idValue, function (data) {
+        console.log("this is d ", data)
 
         data.attendance = state;
+        console.log("this is d ", data)
+
         $.ajax({
             method: 'PUT',
             url: 'http://localhost:3000/viewMeeting/' + idValue,

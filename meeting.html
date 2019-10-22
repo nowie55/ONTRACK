@@ -142,27 +142,27 @@
                 <div class="modal-body">
                     <form method="PUT"> 
                         <div class="form-group">
-                            <label for="topic">Topic:</label>
-                            <input type="text" class="form-control" id="topic" placeholder="Enter Topic" name="topic">
+                            <label for="topic1">Topic:</label>
+                            <input type="text" class="form-control" id="topic1" placeholder="Enter Topic" name="topic">
                         </div>
                         
                         <div class="form-group">
-                            <label for="description">Description:</label>
-                            <input type="text" class="form-control" id="description" placeholder="Enter Description" name="description">
+                            <label for="description1">Description:</label>
+                            <input type="text" class="form-control" id="description1" placeholder="Enter Description" name="description">
                         </div>
     
                         <div class="form-group">
-                            <label for="date">Date:</label>
-                            <input type="date" class="form-control" id="date" placeholder="Enter Date" name="date">
+                            <label for="date1">Date:</label>
+                            <input type="date" class="form-control" id="date1" placeholder="Enter Date" name="date">
                         </div>
                         <div class="form-group">
-                                <label for="time">Time:</label>
-                                <input type="time" class="form-control" id="time" placeholder="Enter Time" name="time">
+                                <label for="time1">Time:</label>
+                                <input type="time" class="form-control" id="time1" placeholder="Enter Time" name="time">
                             </div>
                     </form>
                 </div> 
                     <form class="modal-footer">
-                        <button type="button"  class="btn btn-success" id="editMeeting">Save changes</button>
+                        <button type="button"  class="btn btn-success update" id="updateMeeting">Update</button>
                       </form>
                    
             </div>
@@ -181,25 +181,24 @@
                     <p>Please fill in this form to add an employee to a meeting.</p>
                 </div>
                 <div class="modal-body">
-                    <form method="POST">
-                        <div class="form-group">
-                            <label for="firstName">FirstName:</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="Enter Firstname" name="firstName">
-                        </div>
+                    <form method="PUT">
+                       
     
-                        <div class="form-group">
-                            <label for="lastName">LastName:</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Enter Lastname" name="lastName">
+                        <div class="container-fluid table-responsive">
+                            <table class="table table-striped invite-table">
+                                <tr>
+                                  <td>Employee Id</td>
+                                  <td>First Name</td>
+                                  <td>Last Name</td>
+                                  <td>Email</td>
+                                  <td>Department</td>
+                              <td>Invite to Meeting</td>
+                                </tr>
+                                <tbody id="inviteBody">
+                
+                                </tbody>
+                            </table>
                         </div>
-    
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter Email" name="Email">
-                        </div>
-                        <div class="form-group">
-                                <label for="department">Department:</label>
-                                <input type="text" class="form-control" id="department" placeholder="Enter Department" name="Department">
-                            </div>
                             
                     </form>
                 </div> 
