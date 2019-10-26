@@ -151,14 +151,6 @@
   ],
   "meeting": [
     {
-      "undefined": [
-        "",
-        "",
-        ""
-      ],
-      "id": 2
-    },
-    {
       "topic": "Orientation",
       "description": "Introducing new team members to work flow and ethics",
       "date": "2019-10-20",
@@ -171,14 +163,6 @@
       "date": "2019-10-16",
       "time": "09:00",
       "id": 4
-    },
-    {
-      "undefined": [
-        "",
-        "",
-        ""
-      ],
-      "id": 5
     },
     {
       "topic": "dfg",
@@ -238,6 +222,14 @@
         "18"
       ],
       "id": 12
+    },
+    {
+      "topic": "dfghj",
+      "description": "ghjkl",
+      "date": "2019-10-11",
+      "time": "00:00",
+      "invitedMembers[]": "0",
+      "id": 13
     }
   ],
   "viewMeeting": [
@@ -254,7 +246,7 @@
       "users[1][email]": "ime@yahoo.com",
       "users[1][department]": "Data Centre",
       "users[1][id]": "11",
-      "users[1][áttendance]": "0",
+      "users[1][áttendance]": "1",
       "users[2][firstName]": "Esther",
       "users[2][lastName]": "Akpagbue",
       "users[2][email]": "esther@yahoo.com",
@@ -282,6 +274,62 @@
       "users[2][email]": "ime@yahoo.com",
       "users[2][department]": "Data Centre",
       "users[2][id]": "11",
+      "users[2][áttendance]": "0",
+      "users[3][firstName]": "Odudu",
+      "users[3][lastName]": "Akpan",
+      "users[3][email]": "odu@yahoo.com",
+      "users[3][department]": "Welfare",
+      "users[3][id]": "17",
+      "users[3][áttendance]": "0",
+      "count": "4"
+    },
+    {
+      "id": "12",
+      "users[0][firstName]": "Dina",
+      "users[0][lastName]": "Kalu",
+      "users[0][email]": "dina.kalu@gmail.com",
+      "users[0][department]": "Administration",
+      "users[0][id]": "10",
+      "users[0][áttendance]": "0",
+      "users[1][firstName]": "Ime",
+      "users[1][lastName]": "Kalu",
+      "users[1][email]": "ime@yahoo.com",
+      "users[1][department]": "Data Centre",
+      "users[1][id]": "11",
+      "users[1][áttendance]": "1",
+      "users[2][firstName]": "Esther",
+      "users[2][lastName]": "Akpagbue",
+      "users[2][email]": "esther@yahoo.com",
+      "users[2][department]": "Customer care",
+      "users[2][id]": "16",
+      "users[2][áttendance]": "0",
+      "users[3][firstName]": "Odudu",
+      "users[3][lastName]": "Akpan",
+      "users[3][email]": "odu@yahoo.com",
+      "users[3][department]": "Welfare",
+      "users[3][id]": "17",
+      "users[3][áttendance]": "0",
+      "count": "4"
+    },
+    {
+      "id": "13",
+      "users[0][firstName]": "Uduak",
+      "users[0][lastName]": "Okafor",
+      "users[0][email]": "uduak@yahoo.com",
+      "users[0][department]": "Data Centre",
+      "users[0][id]": "19",
+      "users[0][áttendance]": "1",
+      "users[1][firstName]": "Ujah",
+      "users[1][lastName]": "Jideofor",
+      "users[1][email]": "ujah@yahoo.com",
+      "users[1][department]": "SOC",
+      "users[1][id]": "18",
+      "users[1][áttendance]": "0",
+      "users[2][firstName]": "Esther",
+      "users[2][lastName]": "Akpagbue",
+      "users[2][email]": "esther@yahoo.com",
+      "users[2][department]": "Customer care",
+      "users[2][id]": "16",
       "users[2][áttendance]": "0",
       "users[3][firstName]": "Odudu",
       "users[3][lastName]": "Akpan",
