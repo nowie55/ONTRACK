@@ -4,7 +4,7 @@
       "firstName": "Dina",
       "lastName": "Kalu",
       "email": "dina.kalu@gmail.com",
-      "department": "Admin",
+      "department": "Administration",
       "id": 10
     },
     {
@@ -139,53 +139,157 @@
       "department": "Maintenance",
       "password": "debo",
       "id": 12
+    },
+    {
+      "firstName": "Patrick",
+      "lastName": "Illoh",
+      "email": "patrick@gmail.com",
+      "department": "Admin",
+      "password": "pat",
+      "id": 13
     }
   ],
   "meeting": [
     {
-      "topic": "Tracker",
-      "description": "How to keep track of data.",
-      "date": "2018-10-02",
-      "time": "00:00",
-      "id": 10
+      "undefined": [
+        "",
+        "",
+        ""
+      ],
+      "id": 2
     },
     {
       "topic": "Orientation",
       "description": "Introducing new team members to work flow and ethics",
-      "date": "2019-10-01",
-      "time": "04:59",
+      "date": "2019-10-20",
+      "time": "23:50",
+      "id": 3
+    },
+    {
+      "topic": "Tracker",
+      "description": "How to keep track of data.",
+      "date": "2019-10-16",
+      "time": "09:00",
+      "id": 4
+    },
+    {
+      "undefined": [
+        "",
+        "",
+        ""
+      ],
+      "id": 5
+    },
+    {
+      "topic": "dfg",
+      "description": "ghjkl",
+      "date": "2019-10-11",
+      "time": "00:00",
+      "id": 6
+    },
+    {
+      "topic": "sdftyui",
+      "description": "sdertyuio",
+      "date": "2019-10-10",
+      "time": "00:00",
+      "topic2": "me",
+      "id": 7
+    },
+    {
+      "topic": "erty",
+      "description": "rtyui9o",
+      "date": "2019-10-18",
+      "time": "00:00",
+      "topic2": "us",
+      "id": 8
+    },
+    {
+      "topic": "elvis",
+      "description": "them",
+      "date": "2019-10-19",
+      "time": "00:00",
+      "topic2[]": "me",
+      "id": 9
+    },
+    {
+      "topic": "eno",
+      "description": "we",
+      "date": "2019-10-04",
+      "time": "01:00",
+      "id": 10
+    },
+    {
+      "topic": "them",
+      "description": "we",
+      "date": "2019-10-16",
+      "time": "08:00",
+      "invitedMembers[]": "0",
       "id": 11
     },
     {
-      "topic": "Follow up",
-      "description": "Educating staff on follow up methods",
-      "date": "2019-10-08",
-      "time": "23:00",
+      "topic": "holy",
+      "description": "church",
+      "date": "2019-10-09",
+      "time": "00:00",
+      "invitedMembers[]": [
+        "16",
+        "11",
+        "17",
+        "18"
+      ],
       "id": 12
     }
   ],
   "viewMeeting": [
     {
-      "firstName": "Dina",
-      "lastName": "Kalu",
-      "email": "Kalu",
-      "department": "Admin",
-      "attendance": "true",
-      "id": 10
+      "id": "4",
+      "users[0][firstName]": "Dina",
+      "users[0][lastName]": "Kalu",
+      "users[0][email]": "dina.kalu@gmail.com",
+      "users[0][department]": "Administration",
+      "users[0][id]": "10",
+      "users[0][áttendance]": "1",
+      "users[1][firstName]": "Ime",
+      "users[1][lastName]": "Kalu",
+      "users[1][email]": "ime@yahoo.com",
+      "users[1][department]": "Data Centre",
+      "users[1][id]": "11",
+      "users[1][áttendance]": "0",
+      "users[2][firstName]": "Esther",
+      "users[2][lastName]": "Akpagbue",
+      "users[2][email]": "esther@yahoo.com",
+      "users[2][department]": "Customer care",
+      "users[2][id]": "16",
+      "users[2][áttendance]": "1",
+      "count": "3"
     },
     {
-      "id": 11,
-      "attendance": "false"
-    }
-  ],
-  "inviteMeeting": [
-    {
-      "firstName": "Ime",
-      "lastName": "Kalu",
-      "email": "ime@yahoo.com",
-      "department": "Data Centre",
-      "invite": "true",
-      "id": 11
+      "id": "9",
+      "users[0][firstName]": "Dina",
+      "users[0][lastName]": "Kalu",
+      "users[0][email]": "dina.kalu@gmail.com",
+      "users[0][department]": "Administration",
+      "users[0][id]": "10",
+      "users[0][áttendance]": "0",
+      "users[1][firstName]": "Esther",
+      "users[1][lastName]": "Akpagbue",
+      "users[1][email]": "esther@yahoo.com",
+      "users[1][department]": "Customer care",
+      "users[1][id]": "16",
+      "users[1][áttendance]": "1",
+      "users[2][firstName]": "Ime",
+      "users[2][lastName]": "Kalu",
+      "users[2][email]": "ime@yahoo.com",
+      "users[2][department]": "Data Centre",
+      "users[2][id]": "11",
+      "users[2][áttendance]": "0",
+      "users[3][firstName]": "Odudu",
+      "users[3][lastName]": "Akpan",
+      "users[3][email]": "odu@yahoo.com",
+      "users[3][department]": "Welfare",
+      "users[3][id]": "17",
+      "users[3][áttendance]": "0",
+      "count": "4"
     }
   ]
 }

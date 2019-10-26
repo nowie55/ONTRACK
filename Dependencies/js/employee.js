@@ -1,6 +1,7 @@
+
 var employee = [];        //an array used to store all employee         
-var contain;
-var id=0;          //define html contents for the table
+var id=0;             // var contain;           
+        
 
 
 //this is used to add a new employee to the system
@@ -34,24 +35,23 @@ $('#create-employee').click(function () {
 
 
 function load() {                                   //this loads data from a server and 
-    //puts the returned data into the selected element
+                                                     //puts the returned data into the selected element
     $.getJSON("db.json", function (json) {
         employee = json.employee;
-        contain;
+        // contain;
         populateTable(employee);
     });
 }
 
-// jQuery.get('127.9.4.0:3000/employee', function(data) {
 
-// })
 //method for generating the body of the dynamic table
 function populateTable(data) {
+    console.log(data)
     document.getElementById('body').innerHTML = " ";
     for (let i = 0; i < employee.length; i++) {
-        contain = document.createElement("tr");
+        let contain = document.createElement("tr");
         contain.innerHTML = `
-                                               <td class="row-id">${data[i]['id']}</td>
+                                               <td class="employeeId">${data[i]['id']}</td>
                                                <td class="firstName">${data[i]['firstName']}</td>
                                                <td class="lastName">${data[i]['lastName']}</td>
                                                <td class="email">${data[i]['email']}</td>
@@ -65,8 +65,7 @@ function populateTable(data) {
     }
 
 }
-//<td><input type="checkbox" class="attendance-box" ${data[i]['attendance'] == 'true' ? 'checked' : ''} /></td>
-//<td>
+
 
 // to redirect the meeting dropdown to the meeting page from the employee's page
 $('#meeting').click(function () {
@@ -85,7 +84,7 @@ $('#logout').click(function () {
 // this method is used to delete an employee using the ID of the employee
 $('.employee-table').on('click', '.delete', function () {
     var $this = $(this);
-    var id = $this.parent().siblings('.row-id');
+    var id = $this.parent().siblings('.employeeId');
     var idValue = id.text();
     $.ajax({
         method: 'DELETE',
@@ -99,17 +98,29 @@ $('.employee-table').on('click', '.delete', function () {
 })
 
 //method for reading an employee(in progress)
-$('#search-bar').keyup(event => {
+// $('#search-bar').click(event => {
 
-    let filteredResult = employee.filter(employee => {
-        if (event.target.value === '') {
-            populateTable(employee)
-        }
+//     const employeeid = $('#search-box').val();
+// console.log(employeeid);
+//     // $.ajax({ 
+//     //     type:"GET",
+//     //     url:`http://localhost:3000/employee?id_like=${employeeid}`,
+//     //     success:function(employee){
+//     //         alert('Search now works')
+//     //     }
+//     // })
+ 
+//     // let filteredResult = employee.filter(employee => {
+//     //     if (event.target.value === '') {
+//     //         populateTable(employee)
+//     //     }
 
-        return employee.id.includes(event.target.value)  //it filters out the employee which matches the ID being searched 
-    })
-    populateTable(filteredResult);
-})
+//     //     return employee.id.includes(event.target.value)  //it filters out the employee which matches the ID being searched 
+//     // })
+//     // populateTable(filteredResult);
+
+
+// })
 
 
 //method for editing an employee
@@ -120,30 +131,29 @@ $('.employee-table').on('click', '.edit', function(e) {
     var lName =   $(e.target).closest('tr').find(".lastName").html();
     var mail =   $(e.target).closest('tr').find(".email").html();
     var dept =   $(e.target).closest('tr').find(".department").html();
-    id = $(e.target).closest('tr').find(".row-id").html();
+    id = $(e.target).closest('tr').find(".employeeId").html();
    
-$("#firstName1").val(fName);
-$("#lastName1").val(lName);
-$("#email1").val(mail);
-$("#department1").val(dept);
+    $("#firstName1").val(fName);
+    $("#lastName1").val(lName);
+    $("#email1").val(mail);
+    $("#department1").val(dept);
 
 
 })
 
 $('#updateEmployee').click(function(e) {
 
-  
-let firstName= $("#firstName1").val();
-let lastName=$("#lastName1").val();
-let email=$("#email1").val();
-let department=$("#department1").val();
+    let firstName= $("#firstName1").val();
+    let lastName=$("#lastName1").val();
+    let email=$("#email1").val();
+    let department=$("#department1").val();
 
     $.ajax({
         type: 'PUT',
         url: 'http://localhost:3000/employee/' +id,
-        data: { firstName: firstName, lastName: lastName, email: email, department: department}, //, attendance: false
+        data: { firstName: firstName, lastName: lastName, email: email, department: department}, 
         success: function (result) {
-            alert('Employee edited successfuly');
+            alert('Employee updated successfully');
             location.reload();
         }
    

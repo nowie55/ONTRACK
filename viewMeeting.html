@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
-<body onLoad="load()">
+<body onLoad=load()>
 
     <!--My navigation bar at the beginning of my site-->
 
@@ -57,7 +57,10 @@
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <a href="#"  data-toggle="modal" data-target="#createMeetingModal">Create Meeting</a>    
+            <ul>
+            <li><a href="#"  data-toggle="modal" data-target="#createMeetingModal" id="meeting1">Create Meeting</a></li>    
+            <li><a href="#"  data-toggle="modal" data-target="#addEmployeeModal" id="inviteEmployee">Invite to Meeting</a></li>
+            </ul>   
         </div>
 
     </div>
@@ -88,14 +91,55 @@
 
     </div>
 
+         <!-- Modal for adding employee to a meeting-->
+         <div id="addEmployeeModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Add Employee to Meeting</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        <p>Please check the right box to add an employee to a meeting.</p>
+                    </div>
+                    <div class="modal-body">
+                        <form method="PUT">
+                           
+        
+                            <div class="container-fluid table-responsive">
+                                <table class="table table-striped invite-table">
+                                    <tr>
+                                      <td>Employee Id</td>
+                                      <td>First Name</td>
+                                      <td>Last Name</td>
+                                      <td>Email</td>
+                                      <td>Department</td>
+                                  <td>Invite to Meeting</td>
+                                    </tr>
+                                    <tbody id="inviteBody">
+                    
+                                    </tbody>
+                                </table>
+                            </div>
+                                
+                        </form>
+                    </div> 
+                    <form class="modal-footer">
+                        <button type="button" id="addEmployee" class="btn btn-success">Add to Meeting</button>
+                      </form>   
+                </div>
+            </div>
+        </div> 
+        
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="./Dependencies/js/adminStyling.js"></script>
-    <script src="./Dependencies/js/employee.js"></script>
-    <script src="./Dependencies/js/meeting.js"></script>
+    <!-- <script src="./Dependencies/js/employee.js"></script> -->
+    <!-- <script src="./Dependencies/js/meeting.js"></script> -->
     <!-- <script src="./Dependencies/js/login.js"></script> -->
     <script src="./Dependencies/js/viewMeeting.js"></script>
 
